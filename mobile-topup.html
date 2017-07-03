@@ -1,0 +1,113 @@
+	<div class="middle_title">
+	        <h2>Mobile Top-up</h2>
+	        <img src="images/octopus_image.png" alt="image">
+	</div>
+	<div class="transfer_information clearfix hidden-xs">
+    <div class="transfer_amount"> <a href="javascript:void(0)" class="amount_price editmobile_topup"> <b class="currency_icon"> &#8358;</b> <strong> 39<span>,678<small>.20</small> </span></strong> </a> </div>
+    <div class="right_transferInfo">
+      <div class="phone_number"> <strong>My Phone, <a class="mobile_topup_users_phonebook open_smallpopup" href="javascript:void(0)">Change</a></strong>
+      <a class="editmobile_topup" href="#">0802 344 6789 </a> <strong class="mtn">Telco: <a class="mobile_topup_confirm_telco open_smallpopup" href="javascript:void(0)">MTN</a></strong> </div>
+      <div class="button_group">
+        <button type="button" class="btn btn-default save_button mobile_topup_savefinal">Save</button>
+        <button type="button" class="btn btn-default send_button save_button mobile_topup_doitfinal">Do it</button>
+        <button type="button" class="btn btn-default send_button cancel_home">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+			<div class="transfer_information informationfund_view clearfix visible-xs">
+			 <div class="button_group clearfix">
+					 <button type="button" class="btn btn-default save_button mobile_topup_savefinal">Save</button>
+					 <button type="button" class="btn btn-default send_button save_button mobile_topup_doitfinal">Do it</button>
+					 <button type="button" class="btn btn-default send_button cancel_home">Cancel</button>
+				</div>
+
+				<div class="right_transferInfo">
+
+					<div class="mobile_transferfund">
+
+						<ul>
+							 <li>
+							 <div class="row">
+								 <div class="col-xs-4">
+								 <strong>Amount</strong>
+								 </div>
+								 <div class="col-xs-7">N30,000.00</div>
+
+							 </div>
+							 </li>
+
+							<li>
+									 <div class="row">
+										 <div class="col-xs-4">
+										 <strong>Phone No :</strong>
+										 </div>
+										 <div class="col-xs-7">04165847</div>
+
+									 </div>
+						 	</li>
+
+						 	<li>
+									 <div class="row">
+										 <div class="col-xs-4">
+										 <strong>Telco :</strong>
+										 </div>
+										 <div class="col-xs-7">Telco 1</div>
+
+									 </div>
+					 		</li>
+						 	<li>
+								 <div class="row">
+									 <div class="col-xs-4">
+									 <strong>Account :</strong>
+									 </div>
+									 <div class="col-xs-7">000 897 453</div>
+
+								 </div>
+					 	 	</li>
+						</ul>
+					</div>
+
+					 <ul class="transfer_infolist">
+						 <li>Debit your account </li>
+						 <li>Credit James account</li>
+						 <li>Inform James</li>
+					 </ul>
+
+				</div>
+			</div>
+
+
+<script>
+	$(document).ready(function(){
+		$(".open_smallpopup").click(function(){
+		$(".modal_popupSmall").addClass("modal_popup_active");
+		$(".overlay_modal_second").addClass("overlay_modal-active");
+		});
+
+		$(".popup_close").click(function(){
+		$(".modal_popup").removeClass("modal_popup_active");
+		$(".overlay_modal").removeClass("c-mask-active");
+		});
+
+		$(document).on('click', '.close_smallmodal' ,function(){
+		$(".modal_popupSmall").removeClass("modal_popup_active");
+		$(".overlay_modal_second").removeClass("overlay_modal-active");
+		});
+
+		$(".overlay_modal_second").click(function(){
+		$(".modal_popupSmall").removeClass("modal_popup_active");
+		$(".overlay_modal_second").removeClass("overlay_modal-active");
+		});
+
+	});
+</script>
+<script>
+function setHeight() {
+var windowheight=$(window).height();
+var headerheight=$('#top_headpopup,.telecos_top').height();
+var mainheight=parseInt(windowheight) - (parseInt(headerheight)+parseInt(0))-9;
+ $("#middle_accountoption, .telecos_list").css('height', mainheight);
+
+};
+</script>

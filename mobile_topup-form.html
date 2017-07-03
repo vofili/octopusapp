@@ -1,0 +1,83 @@
+<div class="formsection_content">
+        <div class="middle_title">
+          <h2>Mobile Top-up</h2>
+          <img src="images/octopus_image.png" alt="image"> </div>
+        <div class="transfer_information clearfix">
+          <div class="send_money">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>My Account <b>*</b></label>
+                  <input type="text" class="form-control inputbox_control bank_mandatory" id="myaccount_number" >
+                  <span>Pick from <a class="mobile_topup_myaccount_list open_smallpopup" href="javascript:void(0)">list</a></span></div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>Phone Number: <b>*</b></label>
+                  <input type="text" class="form-control inputbox_control bank_mandatory" >
+                  <span>check <a class="mobile_topup_phoneno_history open_smallpopup" href="javascript:void(0)">history</a> or <a class="mobile_topup_phoneno_octopus open_smallpopup" href="javascript:void(0)">octopus</a></span></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>how much <b>*</b></label>
+                  <input type="text" class="form-control inputbox_control bank_mandatory" onchange="setTwoNumberDecimal(this)"   >
+                  <span>check <a class="mobile_topup_howmuch_history open_smallpopup" href="javascript:void(0)">history</a> or <a class="mobile_topup_howmuch_octopus open_smallpopup" href="javascript:void(0)">octopus</a></span></div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>the Telco: <b>*</b> </label>
+                  <input type="text" class="form-control inputbox_control bank_mandatory" >
+                  <span>Pick from <a class="mobile_topup_thetelco_list open_smallpopup" href="javascript:void(0)">list</a></span></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <figure class="mobile_comapany"><img src="images/mtn_image.png" alt="image"></figure>
+              </div>
+            </div>
+            <div class="right_transferInfo">
+              <div class="button_group">
+                <button type="button" class="btn btn-default save_button save_btn mobile_topup_form_save">Save it</button>
+                <button type="button" class="btn btn-default send_button save_button save_btn mobile_topup_form_goodtogo">Good to go</button>
+                <button type="button" class="btn btn-default send_button cancel_home">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+<script>
+		$(document).ready(function(){
+		$(".open_smallpopup").click(function(){
+		$(".modal_popupSmall").addClass("modal_popup_active");
+		$(".overlay_modal_second").addClass("overlay_modal-active");
+		});
+
+		$(".popup_close").click(function(){
+		$(".modal_popup").removeClass("modal_popup_active");
+		$(".overlay_modal").removeClass("c-mask-active");
+		});
+
+
+		$(document).on('click', '.close_smallmodal' ,function(){
+		$(".modal_popupSmall").removeClass("modal_popup_active");
+		$(".overlay_modal_second").removeClass("overlay_modal-active");
+		});
+
+		$(".overlay_modal_second").click(function(){
+		$(".modal_popupSmall").removeClass("modal_popup_active");
+		$(".overlay_modal_second").removeClass("overlay_modal-active");
+		});
+
+		});
+</script>
+<script>
+	/* decimal work */
+function setTwoNumberDecimal(el) {
+    el.value = parseFloat(el.value).toFixed(2);
+}
+/* decimal work */
+</script>

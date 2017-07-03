@@ -1,0 +1,93 @@
+<div class="formsection_content">
+        <div class="middle_title">
+          <h2>Send/Request Money</h2>
+          <img src="images/octopus_image.png" alt="image"> </div>
+        <div class="transfer_information clearfix">
+          <div class="send_money">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>My Account <b>*</b></label>
+                  <input type="text" class="form-control inputbox_control bank_mandatory" >
+                  <span>Pick from <a  class="sendreqmyaccount open_smallpopup" href="javascript:void(0)">list</a></span></div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>His/Her Account <b>*</b></label>
+                  <input type="text" class="form-control inputbox_control bank_mandatory" >
+                  <span>check <a class="sendreq_hisher_account_history open_smallpopup" href="javascript:void(0)">history</a> or <a class="sendreq_hisher_account_octopus open_smallpopup" href="javascript:void(0)">octopus</a></span></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>how much <b>*</b></label>
+                  <input type="text" class="form-control inputbox_control bank_mandatory" onchange="setTwoNumberDecimal(this)"  >
+                  <span>check <a class="sendreq_howmuch_history open_smallpopup" href="javascript:void(0)">history</a> or <a
+									class="sendreq_howmuch_octopus open_smallpopup"	 href="javascript:void(0)">octopus</a></span></div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>in what bank <b>*</b></label>
+                  <input type="text" class="form-control inputbox_control bank_mandatory" >
+                  <span>Pick from <a class="sendreq_inwhat_bank_list open_smallpopup" href="javascript:void(0)">list</a></span></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>Narrative</label>
+                  <textarea class="form-control inputbox_control" ></textarea>
+                  <span>Pick from <a class="sendreq_narrative_list open_smallpopup" href="javascript:void(0)">list</a></span></div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label> beneficiary name </label>
+                  <input type="text" class="form-control inputbox_control open_smallpopup beneficiarylist" >
+                </div>
+              </div>
+            </div>
+            <div class="right_transferInfo">
+              <div class="button_group">
+                <button type="button" class="btn btn-default save_button save_btn sendreqsave_button">Save</button>
+                <button type="button" class="btn btn-default send_button save_btn sendreqsend_button"  >Send</button>
+                <button type="button" class="btn btn-default send_button sendreqsend_button">Request</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<script>
+		$(document).ready(function(){
+		$(".open_smallpopup").click(function(){
+		$(".modal_popupSmall").addClass("modal_popup_active");
+		$(".overlay_modal_second").addClass("overlay_modal-active");
+		});
+
+		$(document).on('click', '.close_smallmodal' ,function(){
+		$(".modal_popupSmall").removeClass("modal_popup_active");
+		$(".overlay_modal_second").removeClass("overlay_modal-active");
+		});
+
+		$(".overlay_modal_second").click(function(){
+		$(".modal_popupSmall").removeClass("modal_popup_active");
+		$(".overlay_modal_second").removeClass("overlay_modal-active");
+		});
+
+		});
+</script>
+
+
+<script>
+
+
+/* decimal work */
+function setTwoNumberDecimal(el) {
+	if(el.value != ""){
+		el.value = parseFloat(el.value).toFixed(2);
+	}
+}
+/* decimal work */
+
+</script>

@@ -1,0 +1,65 @@
+<div class="formsection_content">
+        <div class="middle_title">
+          <h2>Send Money</h2>
+          <img src="images/octopus_image.png" alt="image"> </div>
+        <div class="transfer_information clearfix">
+          <div class="send_money">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>from <b>*</b></label>
+                  <input type="text" class="form-control inputbox_control bank_mandatory" >
+                  <span>Pick from <a href="">list</a></span></div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>to who <b>*</b></label>
+                  <input type="text" class="form-control inputbox_control bank_mandatory" >
+                  <span>check <a href="">history</a> or <a href="">octopus</a></span></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>how much <b>*</b> </label>
+                  <input type="text" class="form-control inputbox_control how_much_amount bank_mandatory"  onchange="setTwoNumberDecimal(this)" />
+                  <span>check <a href="">history</a> or <a href="">octopus</a></span></div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>in what bank <b>*</b> </label>
+                  <input type="text" class="form-control inputbox_control bank_mandatory" >
+                  <span>Pick from <a href="">list</a></span></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12 col-md-12">
+                <div class="form-group">
+                  <label>Narrative</label>
+                  <textarea class="form-control inputbox_control" ></textarea>
+                  <span>Pick from <a href="">list</a></span></div>
+              </div>
+            </div>
+            <div class="right_transferInfo">
+              <div class="button_group">
+                <button type="button" class="btn btn-default save_button save_btn">Save</button>
+                <button type="button" class="btn btn-default send_button save_btn ">Send</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+<script type="text/javascript">
+
+/* decimal work */
+function setTwoNumberDecimal(el) {
+	if(el.value != ""){
+		el.value = parseFloat(el.value).toFixed(2);
+	}
+}
+/* decimal work */
+</script>
+</body>
+</html>
