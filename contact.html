@@ -1,0 +1,64 @@
+<div class="formsection_content">
+        <div class="middle_title">
+          <h2>Contact Us</h2>
+          <img src="images/octopus_image.png" alt="image"> </div>
+        <div class="transfer_information clearfix">
+          <div class="send_money">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>Name <b>*</b></label>
+                  <input type="text" class="form-control inputbox_control bank_mandatory" >
+                 </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>Email <b>*</b></label>
+                  <input type="text" class="form-control inputbox_control bank_mandatory" >
+                 </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>Phone Number <b>*</b></label>
+                  <input type="text" class="form-control inputbox_control bank_mandatory"  >
+                </div>
+              </div>
+              <div class="col-sm-6">
+								<div class="form-group">
+                  <select class="form-control">
+                    <option selected="selected">--Message type--</option>
+                    <option>Functionality Issue</option>
+                    <option>Technical Issue</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          <div class="row">
+                <div class="col-sm-12 col-md-12">
+                <div class="form-group">
+                <label>Messages</label><textarea class="form-control inputbox_control"></textarea>
+            </div>
+            </div>
+
+            </div>
+            <div class="right_transferInfo">
+              <div class="button_group">
+                <button type="button" class="btn btn-default save_button save_btn send_contact_us">Send</button>
+                <button type="button" class="btn btn-default send_button reset_contactus">Reset</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<script>
+$(document).ready(function(){
+
+	$('.reset_contactus').on('click', function(){
+		$('.inputbox_control').val('');
+	});
+
+	});
+</script>

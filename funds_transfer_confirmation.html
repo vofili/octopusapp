@@ -1,0 +1,22 @@
+<div class="middle_title">
+        <h2>Funds Transfer</h2>
+        <img src="images/octopus_image.png" alt="image"> </div>
+<div class="transfer_information clearfix job_success">
+        <div class="transfer_msg"> <img src="images/money-transfer.png" alt="img"> </div>
+        <div class="right_transferInfo">
+          <h2><span>Hello David Benson</span><br/>
+            <strong>job successfully saved</strong></h2>
+          <div class="button_group">
+            <button type="button" class="btn btn-default save_button popup_close">ok</button>
+          </div>
+        </div>
+      </div>
+
+<script>
+	$(document).ready(function(){
+			$(".popup_close").click(function(){
+			$(".modal_popup").removeClass("modal_popup_active");
+			$(".overlay_modal").removeClass("c-mask-active");
+			});
+	});
+</script>
